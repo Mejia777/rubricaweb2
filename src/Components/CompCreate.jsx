@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { listContext } from "../App";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const CompCreate = () => {
-  const { list, setList, setActiveComponent } = useContext(listContext);
+  const { list, actualizarLista, setActiveComponent } = useContext(listContext);
 
   const formik = useFormik({
     initialValues: {
@@ -39,7 +39,7 @@ const CompCreate = () => {
     }),
     onSubmit: (values) => {
       console.log(values);
-      setList([...list, values]);
+      actualizarLista([...list, values]);
       setActiveComponent("content");
     },
   });

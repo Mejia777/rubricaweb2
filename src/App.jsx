@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import "./App.css";
 import CompContent from "./Components/CompContent";
 import CompCreate from "./Components/CompCreate";
@@ -116,16 +116,25 @@ const valorInicialList = JSON.parse(localStorage.getItem("list")) || listaOver;
 
 function App() {
   const [jugadores, setJugadores] = useState(valorInicialList);
-  const [list, setList] = useState(listaDeportes); //
+  const [list, setList] = useState(
+    JSON.parse(localStorage.getItem("listDeporte")) || listaDeportes
+  ); //
 
   const [activeComponent, setActiveComponent] = useState("overviews");
+
+  const actualizarLista = (lista_actualizada) => {
+    localStorage.setItem("listDeporte", JSON.stringify(lista_actualizada));
+    setList(lista_actualizada);
+  };
 
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
   };
   return (
     <>
-      <listContext.Provider value={{ list, setList, setActiveComponent }}>
+      <listContext.Provider
+        value={{ list, actualizarLista, setActiveComponent }}
+      >
         <div style={{ backgroundColor: "#18203a" }}>
           <nav className="navbar">
             <div>
