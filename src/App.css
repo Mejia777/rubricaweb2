@@ -1,6 +1,13 @@
 body {
   background-color: #121729;
 }
+.footer{
+  background-color: #18203a;
+  color:#fff;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;

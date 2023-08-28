@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { listContext } from "../App";
-
 const CompContent = () => {
   const { list } = useContext(listContext);
   return (

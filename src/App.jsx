@@ -3,6 +3,7 @@ import "./App.css";
 import CompContent from "./Components/CompContent";
 import CompCreate from "./Components/CompCreate";
 import CompOver from "./Components/CompOver";
+import Footer from "./Components/footer";
 //creo el contexto de la lista
 const listContext = createContext();
 const listaOver = [
@@ -35,7 +36,6 @@ const listaOver = [
     active: false,
   },
 ];
-
 const listaDeportes = [
   {
     name: "Futbol",
@@ -116,7 +116,7 @@ const valorInicialList = JSON.parse(localStorage.getItem("list")) || listaOver;
 
 function App() {
   const [jugadores, setJugadores] = useState(valorInicialList);
-  const [list, setList] = useState(listaDeportes);
+  const [list, setList] = useState(listaDeportes); //
 
   const [activeComponent, setActiveComponent] = useState("overviews");
 
@@ -152,6 +152,7 @@ function App() {
           {activeComponent === "create" && <CompCreate />}
         </div>
       </listContext.Provider>
+      <Footer />
     </>
   );
 }
