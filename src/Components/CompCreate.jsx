@@ -23,6 +23,10 @@ const CompCreate = () => {
 
       descripcion: Yup.string()
         .required("Ingrese la descripción")
+        .matches(
+          /^[^\s].+[^\s]$/,
+          "La descripción no puede tener espacios al final"
+        )
         .max(200, "Maximo 200 caracteres")
         .min(50, "minimo 50 cartacteres"),
 
@@ -30,11 +34,13 @@ const CompCreate = () => {
 
       equipo: Yup.string()
         .required("Ingrese un equipo")
+        .matches(/^[^\s].+[^\s]$/, "El equipo no puede tener espacios al final")
         .max(15, "Maximo 15 caracteres")
         .min(3, "minimo 3 cartacteres"),
 
       img: Yup.string()
-        .required("Ingrese un img")
+        .required("Ingrese un link")
+        .matches(/^[^\s].+[^\s]$/, "El link no puede tener espacios al final")
         .max(100, "Maximo 50 caracteres")
         .min(10, "minimo 10 cartacteres"),
     }),

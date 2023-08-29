@@ -114,7 +114,7 @@ body {
 /*contenedor del formulario*/
 .contenedor__form {
   max-width: 650px;
-  margin: 4rem auto auto auto;
+  margin: 4rem auto 4rem auto;
   border-radius: 25px;
   text-align: center;
   color: white;
@@ -166,13 +166,19 @@ img {
 .contenedor__form{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-@media (max-width: 600px) {
+textarea{
+  height: 70px; 
+  overflow-y: auto; 
+  resize: none; 
+}
+@media (max-width: 700px) {
   .grupo-1 {
     grid-template-columns: 1fr;
   }
+}
+@media (max-width: 390px){
   .contenedor__form{
     grid-template-columns: 1fr;
-    align-items: center;
   }
   .imagen{
     display: none;

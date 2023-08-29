@@ -60,7 +60,7 @@ const footer = () => {
             </div>
             <h4>Contacto</h4>
             <p>Teléfono: (605) 456-7890</p>
-            <p>Correo Electrónico: nosotrosTeAyudamos@gmail.com</p>
+            <p>Correo: nosotrosTeAyudamos@gmail.com</p>
           </div>
         </div>
         <div className="grupo-2">
