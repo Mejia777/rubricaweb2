@@ -1,35 +1,69 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 const footer = () => {
   return (
     <div>
-      <footer className="footer">
-        <div className="bloque1">
-          <div className="grupo">
+      <footer className="pie-pagina">
+        <div className="grupo-1">
+          <div className="box">
             <h2>Sobre nosotros</h2>
-            <p>Este es un trabajo escolar, queremos dar todo de nosotros</p>
-            <p>para la implementacion de este codigo</p>
+            <p>
+              ¡Hola! Somos un apasionado grupo de estudiantes de Ingeniería de
+              Sistemas que estamos trabajando juntos en un emocionante proyecto
+              como parte de nuestra evaluación parcial.
+            </p>
+            <p>
+              Nuestra misión es aplicar los conocimientos y habilidades que
+              hemos adquirido en el aula para abordar desafíos del mundo real y
+              crear soluciones innovadoras.
+            </p>
+            <p>
+              A medida que avanzamos en nuestra educación, buscamos no solo
+              aprobar exámenes, sino también marcar una diferencia en la
+              industria y la sociedad mediante la aplicación práctica de la
+              tecnología.
+            </p>
           </div>
-          <div className="grupo">
-            <h2>Siguenos</h2>
-            <div className="red-social">
-              <a href="#" className="fa fa-facebook"></a>
-              <a href="#" className="fa fa-instagram"></a>
-              <a href="#" className="fa fa-github"></a>
-              <a href="#" className="fa fa-twitter"></a>
+          <div className="box">
+            <h2>¡Síguenos en las redes sociales!</h2>
+            <div className="redes-sociales">
+              <a href="https://github.com/HmerMza">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <a href="https://web.facebook.com/mayerlys.lozanobaldovino/">
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a href="https://www.instagram.com/mayerlys_lozano12/">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
             </div>
           </div>
-          <div className="grupo">
-            <h2>Siguenos</h2>
-            <div className="red-social">
-              <a href="#" className="fa fa-facebook"></a>
-              <a href="#" className="fa fa-instagram"></a>
-              <a href="#" className="fa fa-github"></a>
-              <a href="#" className="fa fa-twitter"></a>
+          <div className="box">
+            <div>
+              <h2>Servicio al cliente</h2>
+              <p>
+                Estamos aquí para ayudarte en cualquier momento. Si tienes
+                preguntas, inquietudes o necesitas asistencia, no dudes en
+                contactarnos.
+              </p>
             </div>
+            <div>
+              <h4>Horario de Atención</h4>
+              <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+              <p>Sábados: 10:00 AM - 2:00 PM</p>
+              <p>Domingos: Cerrado</p>
+            </div>
+            <h4>Contacto</h4>
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Correo Electrónico: servicio@tuempresa.com</p>
           </div>
         </div>
-        <div className="bloque2">
+        <div className="grupo-2">
           <small>
             {" "}
             © 2023 Mayerlys Lozano-Hemer Meza. Todos los derechos reservados.

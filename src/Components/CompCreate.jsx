@@ -17,6 +17,7 @@ const CompCreate = () => {
     validationSchema: Yup.object({
       name: Yup.string()
         .required("Ingrese el titulo")
+        .matches(/^[^\s].+[^\s]$/, "El título no puede tener espacios al final")
         .max(20, "Maximo 20 caracteres")
         .min(3, "minimo 3 cartacteres"),
 
@@ -38,9 +39,24 @@ const CompCreate = () => {
         .min(10, "minimo 10 cartacteres"),
     }),
     onSubmit: (values) => {
-      console.log(values);
-      actualizarLista([...list, values]);
-      setActiveComponent("content");
+      const lowerCaseName = values.name.toLowerCase();
+      const lowerCaseEquipo = values.equipo.toLowerCase();
+
+      const existingTitle = list.find(
+        (item) => item.name.toLowerCase() === lowerCaseName
+      );
+      const existingEquipo = list.find(
+        (item) => item.equipo.toLowerCase() === lowerCaseEquipo
+      );
+      if (existingTitle) {
+        formik.setFieldError("name", "Este título ya esta registrado.");
+      } else if (existingEquipo) {
+        formik.setFieldError("equipo", "Este equipo ya esta registrado.");
+      } else {
+        console.log(values);
+        actualizarLista([...list, values]);
+        setActiveComponent("content");
+      }
     },
   });
   return (

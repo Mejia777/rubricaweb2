@@ -4,6 +4,9 @@ import CompContent from "./Components/CompContent";
 import CompCreate from "./Components/CompCreate";
 import CompOver from "./Components/CompOver";
 import Footer from "./Components/footer";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+library.add(fab);
 //creo el contexto de la lista
 const listContext = createContext();
 const listaOver = [
