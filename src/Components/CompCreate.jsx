@@ -63,8 +63,12 @@ const CompCreate = () => {
     <div className="contenedor__form">
       <div className="imagen"></div>
       <form action="" className="form" onSubmit={formik.handleSubmit}>
+        <div className="titulo-from">
+          <h2>Registra a tu equipo</h2>
+        </div>
         <div>
           <label htmlFor="name">Titulo:</label>
+          <br />
           <input
             type="text"
             name="name"
@@ -78,6 +82,7 @@ const CompCreate = () => {
         </div>
         <div>
           <label htmlFor="descripcion">Descripcion:</label>
+          <br />
           <textarea
             type="text"
             name="descripcion"
@@ -91,6 +96,7 @@ const CompCreate = () => {
         </div>
         <div>
           <label htmlFor="categoria">Categoria:</label>
+          <br />
           <select
             name="categoria"
             id="categoria"
@@ -108,6 +114,7 @@ const CompCreate = () => {
         </div>
         <div>
           <label htmlFor="equipo">Equipo:</label>
+          <br />
           <input
             type="text"
             name="equipo"
@@ -121,6 +128,7 @@ const CompCreate = () => {
         </div>
         <div>
           <label htmlFor="img">Link:</label>
+          <br />
           <input
             type="text"
             name="img"
@@ -132,7 +140,7 @@ const CompCreate = () => {
             <div>{formik.errors.img}</div>
           ) : null}
         </div>
-        <input type="submit" value="enviar" />
+        <input type="submit" value="Enviar" className="enviar" />
       </form>
     </div>
   );

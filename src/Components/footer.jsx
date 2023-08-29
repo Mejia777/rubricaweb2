@@ -59,8 +59,8 @@ const footer = () => {
               <p>Domingos: Cerrado</p>
             </div>
             <h4>Contacto</h4>
-            <p>Teléfono: (123) 456-7890</p>
-            <p>Correo Electrónico: servicio@tuempresa.com</p>
+            <p>Teléfono: (605) 456-7890</p>
+            <p>Correo Electrónico: nosotrosTeAyudamos@gmail.com</p>
           </div>
         </div>
         <div className="grupo-2">

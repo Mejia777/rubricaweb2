@@ -5,7 +5,9 @@ body {
   background-color: #18203a;
   color:#fff;
   width: 100%;
+  
 }
+/*Estilos del footer*/
 .grupo-1{
   width: 100%;
   max-width: 1200px;
@@ -32,6 +34,7 @@ body {
 .grupo-2{
   text-align: center;
 }
+/*Estilos del navbar*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -135,4 +138,43 @@ body {
 
 img {
   width: 100px;
+}
+.contenedor__form .enviar{
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  background-color: transparent;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 24px;
+  margin: 1.5rem 1rem;
+  transform: 1000ms;
+  background-color: rgba(231, 9, 9, 0.6);
+}
+.contenedor__form .enviar:hover {
+  background-color: black;
+  transform: 1000ms;
+  color: white;
+}
+
+.contenedor__form  .enviar:active {
+  position: relative;
+  top: 1px;
+  transform: 1000ms;
+}
+.contenedor__form{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media (max-width: 600px) {
+  .grupo-1 {
+    grid-template-columns: 1fr;
+  }
+  .contenedor__form{
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .imagen{
+    display: none;
+  }
 }
