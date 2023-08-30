@@ -109,7 +109,7 @@ const CompCreate = () => {
             onChange={formik.handleChange}
             value={formik.values.categoria}
           >
-            <option value="">Selecciona la categoria</option>
+            <option value="">Selecciona categoria</option>
             <option value="Deporte por equipo">Deporte por equipo</option>
             <option value="Deporte de motor">Deporte de motor</option>
             <option value="Deporte de mesa">Deporte de mesa</option>

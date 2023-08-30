@@ -122,7 +122,8 @@ function App() {
   const [list, setList] = useState(
     JSON.parse(localStorage.getItem("listDeporte")) || listaDeportes
   ); //
-
+  const listaOriginal =
+    JSON.parse(localStorage.getItem("listDeporte")) || listaDeportes;
   const [activeComponent, setActiveComponent] = useState("overviews");
 
   const actualizarLista = (lista_actualizada) => {
@@ -133,10 +134,20 @@ function App() {
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
   };
+  const listaFiltrada = (nombre) => {
+    if (nombre === "todos") {
+      setList(listaOriginal); // Restaurar la lista original
+    } else {
+      const filteredList = listaOriginal.filter(
+        (elemento) => elemento.categoria === nombre
+      );
+      setList(filteredList);
+    }
+  };
   return (
     <>
       <listContext.Provider
-        value={{ list, actualizarLista, setActiveComponent }}
+        value={{ list, actualizarLista, setActiveComponent, listaFiltrada }}
       >
         <div style={{ backgroundColor: "#18203a" }}>
           <nav className="navbar">

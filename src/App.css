@@ -170,15 +170,41 @@ textarea{
   height: 70px; 
   overflow-y: auto; 
   resize: none; 
+  background-color: rgba(230, 77, 77, 0.6);
+  width: 190px;
+  border-radius: 25px;
+  padding: 7px 10px;
+  border: none;
+}
+select{
+  appearance:  none;
+  width: 190px;
+  text-align: center;
+  padding: 7px 10px;
+  margin-top: 2%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(231, 9, 9, 0.6);
+   color: #fff;
+   cursor: pointer;
+   font-size: 14px;
+   border-radius: 25px;
+   border: none;
+}
+input{
+  background-color: rgba(230, 77, 77, 0.6);
+  width: 190px;
+  border-radius: 25px;
+  padding: 7px 10px;
+  border: none;
 }
 @media (max-width: 700px) {
   .grupo-1 {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 390px){
+@media (max-width: 500px){
   .contenedor__form{
-    grid-template-columns: 1fr;
+    display: flow-root;
   }
   .imagen{
     display: none;
