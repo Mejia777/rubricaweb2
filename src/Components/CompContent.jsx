@@ -1,9 +1,20 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
 import { listContext } from "../App";
 const CompContent = () => {
-  const { list, listaFiltrada } = useContext(listContext);
+  const { list } = useContext(listContext);
+  const [listaFiltrada, setListaFiltrada] = useState(list);
   const handleclick = (e) => {
-    listaFiltrada(e.target.value);
+    filtrar(e.target.value);
+  };
+  const filtrar = (nombre) => {
+    if (nombre === "todos") {
+      setListaFiltrada(list); // Restaurar la lista original
+    } else {
+      const filteredList = list.filter(
+        (elemento) => elemento.categoria === nombre
+      );
+      setListaFiltrada(filteredList);
+    }
   };
   return (
     <>
@@ -14,7 +25,7 @@ const CompContent = () => {
         <option value="Deporte de motor">Deporte de motor</option>
       </select>
       <div className="contenedor__card">
-        {list.map((jugador, index) => (
+        {listaFiltrada.map((jugador, index) => (
           <div
             className="card cardcontent"
             key={index}
