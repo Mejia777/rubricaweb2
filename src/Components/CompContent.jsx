@@ -43,7 +43,9 @@ const CompContent = () => {
               <h3>{jugador.name}</h3>
               <p className="descripcion">{jugador.descripcion}</p>
               <p>{`Categoria: ${jugador.categoria}`}</p>
-              <p>{`Equipo: ${jugador.equipo}`}</p>
+              <p>
+                <a href={jugador.linkEquipo}>{`Equipo: ${jugador.equipo}`}</a>
+              </p>
             </div>
           </div>
         ))}

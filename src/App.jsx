@@ -47,6 +47,7 @@ const listaDeportes = [
       "El fútbol, deporte global, enfrenta equipos compitiendo con destreza en el campo, generando emoción y camaradería.",
     categoria: "Deporte por equipo",
     equipo: "Barcelona",
+    linkEquipo: "https://www.fcbarcelona.es/es/",
   },
   {
     name: "Baloncesto",
@@ -55,6 +56,7 @@ const listaDeportes = [
       "Dinámico juego de habilidad donde equipos anotan en aros opuestos, fomentando rapidez, estrategia y cooperación.",
     categoria: "Deporte por equipo",
     equipo: "Miami Heat",
+    linkEquipo: "https://www.nba.com/heat",
   },
   {
     name: "Beisbol",
@@ -63,6 +65,7 @@ const listaDeportes = [
       "Clásico deporte de bateo y campo que combina estrategia, precisión y trabajo en equipo en cada entrada.",
     categoria: "Deporte por equipo",
     equipo: "Cardenales",
+    linkEquipo: "https://www.mlb.com/es/cardinals",
   },
   {
     name: "Formula 1",
@@ -71,6 +74,7 @@ const listaDeportes = [
       "Competición automovilística de alta velocidad con tecnología avanzada, pilotos hábiles y carreras emocionantes globalmente.",
     categoria: "Deporte de motor",
     equipo: "RedBull",
+    linkEquipo: "https://www.redbullracing.com/int-es",
   },
   {
     name: "MotoGP",
@@ -79,6 +83,7 @@ const listaDeportes = [
       "Serie de carreras de motocicletas de élite que presenta velocidad, destreza y emoción en circuitos internacionales.",
     categoria: "Deporte de motor",
     equipo: "Aprilia Racing",
+    linkEquipo: "https://www.aprilia.com/es_ES/aprilia-racing/",
   },
   {
     name: "Rally",
@@ -87,6 +92,7 @@ const listaDeportes = [
       "Competición de conducción extrema en diversas ubicaciones, resaltando resistencia, navegación precisa y destreza.",
     categoria: "Deporte de motor",
     equipo: "Toyota",
+    linkEquipo: "https://www.toyota.com.co/",
   },
   {
     name: "Tenis de Mesa",
@@ -95,6 +101,7 @@ const listaDeportes = [
       "Juego de habilidad rápido con raquetas, donde se golpea una pequeña pelota sobre una mesa dividida.",
     categoria: "Deporte de mesa",
     equipo: "Colombia",
+    linkEquipo: "https://fctm-colombia.com/",
   },
   {
     name: "Billar",
@@ -103,6 +110,7 @@ const listaDeportes = [
       "Juego de precisión y estrategia donde se golpean bolas con un taco en una mesa cubierta de paño, buscando anotar puntos en los bolsillos.",
     categoria: "Deporte de mesa",
     equipo: "Ralph Greenleaf",
+    linkEquipo: "https://en.wikipedia.org/wiki/Ralph_Greenleaf",
   },
   {
     name: "Futbolin",
@@ -111,6 +119,7 @@ const listaDeportes = [
       "Juego de mesa competitivo que simula el fútbol, con jugadores controlados por barras giratorias.",
     categoria: "Deporte de mesa",
     equipo: "España",
+    linkEquipo: "https://www.fefm.es/",
   },
 ];
 //para cargar los datos de los favoritos en el localstorage
@@ -142,7 +151,11 @@ function App() {
         <div style={{ backgroundColor: "#18203a" }}>
           <nav className="navbar">
             <div>
-              <img src="https://i.ibb.co/sbX4xjL/logomaker.png" alt="logo" />
+              <img
+                src="https://i.ibb.co/sbX4xjL/logomaker.png"
+                alt="logo"
+                className="img__logo"
+              />
             </div>
             <div className="navbar__buttons">
               <button onClick={() => handleButtonClick("overviews")}>

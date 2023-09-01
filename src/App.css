@@ -169,6 +169,10 @@ img {
 .descripcion{
   text-align: justify;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
 textarea{
   height: 70px; 
   overflow-y: auto; 
@@ -212,4 +216,11 @@ input{
   .imagen{
     display: none;
   }
+  .img__logo{
+    display: none;
+  }
+  .navbar{
+    justify-content: space-between;
+  }
+  
 }
