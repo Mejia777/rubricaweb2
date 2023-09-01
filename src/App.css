@@ -166,6 +166,9 @@ img {
 .contenedor__form{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.descripcion{
+  text-align: justify;
+}
 textarea{
   height: 70px; 
   overflow-y: auto; 

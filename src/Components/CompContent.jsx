@@ -41,7 +41,7 @@ const CompContent = () => {
             <div className="card__header"></div>
             <div className="card__body">
               <h3>{jugador.name}</h3>
-              <p>{jugador.descripcion}</p>
+              <p className="descripcion">{jugador.descripcion}</p>
               <p>{`Categoria: ${jugador.categoria}`}</p>
               <p>{`Equipo: ${jugador.equipo}`}</p>
             </div>

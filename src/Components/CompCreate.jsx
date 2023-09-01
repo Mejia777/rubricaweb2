@@ -15,6 +15,7 @@ const CompCreate = () => {
       categoria: "",
       equipo: "",
       img: "",
+      linkEquipo: "",
     },
     // Validaciones para cada campo
     validationSchema: Yup.object({
@@ -44,9 +45,19 @@ const CompCreate = () => {
       img: Yup.string()
         .required("Ingrese un link")
         .matches(/^[^\s].+[^\s]$/, "El link no puede tener espacios al final")
-        .max(100, "Maximo 50 caracteres")
+        .max(100, "Maximo 100 caracteres")
+        .min(10, "minimo 10 cartacteres"),
+
+      linkEquipo: Yup.string()
+        .required("Ingrese un link del equipo")
+        .matches(
+          /^[^\s].+[^\s]$/,
+          "El link del equipo no puede tener espacios al final"
+        )
+        .max(50, "Maximo 50 caracteres")
         .min(10, "minimo 10 cartacteres"),
     }),
+
     // Acciones al enviar el formulario
     onSubmit: (values) => {
       // toLoweCase es para convertir nombres y equipos a minúsculas para evitar duplicados
@@ -139,7 +150,7 @@ const CompCreate = () => {
           ) : null}
         </div>
         <div>
-          <label htmlFor="img">Link:</label>
+          <label htmlFor="img">Imagen:</label>
           <br />
           <input
             type="text"
@@ -150,6 +161,20 @@ const CompCreate = () => {
           />
           {formik.touched.img && formik.errors.img ? (
             <div>{formik.errors.img}</div>
+          ) : null}
+        </div>
+        <div>
+          <label htmlFor="linkEquipo">Link equipo:</label>
+          <br />
+          <input
+            type="text"
+            name="linkEquipo"
+            id="linkEquipo"
+            onChange={formik.handleChange}
+            value={formik.values.linkEquipo}
+          />
+          {formik.touched.linkEquipo && formik.errors.linkEquipo ? (
+            <div>{formik.errors.linkEquipo}</div>
           ) : null}
         </div>
         <input type="submit" value="Enviar" className="enviar" />
