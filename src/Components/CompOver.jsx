@@ -41,7 +41,7 @@ const CompOver = ({ jugadores, setJugadores }) => {
               onClick={() => handleclick(jugador.name)}
               alt="Like Icon"
             />
-            <p>{jugador.descripcion}</p>
+            <p lassName="descripcion">{jugador.descripcion}</p>
           </div>
         </div>
       ))}
