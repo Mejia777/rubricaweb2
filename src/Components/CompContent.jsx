@@ -1,11 +1,16 @@
 import { useContext, useState } from "react";
 import { listContext } from "../App";
 const CompContent = () => {
+  // Obtener el contexto "list" del componente padre usando useContext
   const { list } = useContext(listContext);
+  // Estado para mantener la lista filtrada
   const [listaFiltrada, setListaFiltrada] = useState(list);
+
+  // Manejar el cambio en el selector de categorías
   const handleclick = (e) => {
     filtrar(e.target.value);
   };
+  // Función para filtrar la lista según la categoría seleccionada
   const filtrar = (nombre) => {
     if (nombre === "todos") {
       setListaFiltrada(list); // Restaurar la lista original

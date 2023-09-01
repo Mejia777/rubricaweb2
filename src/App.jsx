@@ -115,8 +115,7 @@ const listaDeportes = [
 ];
 //para cargar los datos de los favoritos en el localstorage
 const valorInicialList = JSON.parse(localStorage.getItem("list")) || listaOver;
-//creo el array jugadores
-
+// Componente principal de la aplicación
 function App() {
   const [jugadores, setJugadores] = useState(valorInicialList);
   const [list, setList] = useState(
@@ -125,12 +124,12 @@ function App() {
   //  const listaOriginal =
   //    JSON.parse(localStorage.getItem("listDeporte")) || listaDeportes;
   const [activeComponent, setActiveComponent] = useState("overviews");
-
+  // Función para actualizar la lista de deportes y guardar en LocalStorage
   const actualizarLista = (lista_actualizada) => {
     localStorage.setItem("listDeporte", JSON.stringify(lista_actualizada));
     setList(lista_actualizada);
   };
-
+  // cambia el componente activo
   const handleButtonClick = (componentName) => {
     setActiveComponent(componentName);
   };

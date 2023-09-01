@@ -4,9 +4,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const CompCreate = () => {
+  // Obtener valores y funciones del contexto usando useContext
   const { list, actualizarLista, setActiveComponent } = useContext(listContext);
-
+  // Definición de validaciones usando Yup
   const formik = useFormik({
+    // Definición de valores iniciales y validaciones
     initialValues: {
       name: "",
       descripcion: "",
@@ -14,6 +16,7 @@ const CompCreate = () => {
       equipo: "",
       img: "",
     },
+    // Validaciones para cada campo
     validationSchema: Yup.object({
       name: Yup.string()
         .required("Ingrese el titulo")
@@ -44,16 +47,19 @@ const CompCreate = () => {
         .max(100, "Maximo 50 caracteres")
         .min(10, "minimo 10 cartacteres"),
     }),
+    // Acciones al enviar el formulario
     onSubmit: (values) => {
+      // toLoweCase es para convertir nombres y equipos a minúsculas para evitar duplicados
       const lowerCaseName = values.name.toLowerCase();
       const lowerCaseEquipo = values.equipo.toLowerCase();
-
+      // Verificar si el título o equipo ya existen en la lista
       const existingTitle = list.find(
         (item) => item.name.toLowerCase() === lowerCaseName
       );
       const existingEquipo = list.find(
         (item) => item.equipo.toLowerCase() === lowerCaseEquipo
       );
+      // Validar si ya existe título o equipo y manejar errores
       if (existingTitle) {
         formik.setFieldError("name", "Este título ya esta registrado.");
       } else if (existingEquipo) {
