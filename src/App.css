@@ -1,8 +1,8 @@
 body {
-  background-color: #121729;
+  background-color: #080b14;
 }
 .pie-pagina{
-  background-color: #18203a;
+  background-color: #080b14;
   color:#fff;
   width: 100%;
   
@@ -16,6 +16,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
   text-align: justify;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 .redes-sociales a{
@@ -39,13 +40,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  margin: auto;
-  background-color: #18203a;
+  width: 100%;
+  margin: 0%;
+  background-color: #D3E1E7;
 }
 /*Estilos de los botones con su hover*/
 .navbar__buttons button {
-  color: white;
+  color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
   background-color: transparent;

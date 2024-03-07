@@ -27,18 +27,18 @@ const footer = () => {
               aprobar exámenes, sino también marcar una diferencia en la
               industria y la sociedad mediante la aplicación práctica de la
               tecnología.
-            </p>
+            </p>git
           </div>
           <div className="box">
             <h2>¡Síguenos en las redes sociales!</h2>
             <div className="redes-sociales">
-              <a href="https://github.com/HmerMza">
+              <a href="https://github.com/Mejia777">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href="https://web.facebook.com/mayerlys.lozanobaldovino/">
+              <a href="#">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="https://www.instagram.com/mayerlys_lozano12/">
+              <a href="#">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
@@ -66,7 +66,7 @@ const footer = () => {
         <div className="grupo-2">
           <small>
             {" "}
-            © 2023 Mayerlys Lozano-Hemer Meza. Todos los derechos reservados.
+            © 2024 Samuel Mejia - Julian Garcia . Todos los derechos reservados 
           </small>
         </div>
       </footer>
