@@ -2,43 +2,13 @@ import { createContext, useState } from "react";
 import "./App.css";
 import CompContent from "./Components/CompContent";
 import CompCreate from "./Components/CompCreate";
-import CompOver from "./Components/CompOver";
 import Footer from "./Components/footer";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 library.add(fab);
 //creo el contexto de la lista
 const listContext = createContext();
-const listaOver = [
-  {
-    name: "Lionel Messi",
-    img: "https://i.pinimg.com/1200x/35/de/10/35de10ae4099652e4cf0de9adc31b670.jpg",
-    descripcion:
-      "Talento futbolístico icónico, habilidoso, goleador, líder, visionario, carismático, legendario, dedicado, inspirador, excepcional.",
-    active: false,
-  },
-  {
-    name: "Cristiano Ronaldo",
-    img: "https://fondosmil.com/fondo/6858.jpg",
-    descripcion:
-      "Atleta destacado, goleador carismático, versátil, tenaz, influyente, determinado, competitivo, campeón, internacional, polifacético.",
-    active: false,
-  },
-  {
-    name: "Neymar Jr",
-    img: "https://www.todofondos.net/wp-content/uploads/neymar-jr-fondo-de-pantalla-movil.png",
-    descripcion:
-      "Jugador creativo, hábil regateador, carismático, rápido, impredecible, showman, talentoso, dribbling maestro, controvertido.",
-    active: false,
-  },
-  {
-    name: "Ronaldinho",
-    img: "https://w0.peakpx.com/wallpaper/989/164/HD-wallpaper-ronaldinho-gauchor10-barcelona-brasil-futbol-magia-mundial-r10-soccer.jpg",
-    descripcion:
-      "Jugador Maravilloso, hábil regateador, carismático, impredecible, showman, internacional, talentoso, dribbling maestro, Estrella.",
-    active: false,
-  },
-];
+
 const listaDeportes = [
   {
     name: "Futbol",
